@@ -1,0 +1,10 @@
+<h1>수정화면</h1>
+
+<form action="/home/update" method="POST">
+    <input type="hidden" value="<%= @id %>" name="id">
+    Name : <input type = "text" value="<%= @target.post_username%>" name="new_username"><br/>
+    Content : 
+    <textarea name="new_content"><%=@target.post_content %></textarea><br/>
+    <input type="submit" value="수정">
+</form>
+

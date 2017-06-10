@@ -1,0 +1,54 @@
+
+<%= render "layouts/navbar" %>
+<body>
+
+    <section class="landing">
+    <div class="container">
+      <h2 class="section-title" font-style="">Welcome to Sookmyung Commerce!</h2>
+      <h4 class="section-info">숙명커머스는 숙명인들을 위한 공동구매 플랫폼입니다.</br></br>이제 숙명인만을 위한 공동구매를 진행하세요!</h4>
+    </section>
+    </div>
+  <div class="container">
+    <section class="blog">
+      <h2 class="readable-hidden">Blog</h2>
+      
+      <% Post.all.reverse.each do |p| %>
+      <div class="col-lg-4 col-md-4 col-xs-6">
+          <div class="text-center" style="height:280px; white-space: nowrap; overflow:hidden;">
+              <a href="view/?id=<%= p.id %>">
+                  <img class="img-responsive" src="<%= p.image_url %>" alt="" style="height:250px;">
+              </a>
+              <a href="view/?id=<%= p.id %>" style="text-decoration:none;">
+                 <b class="text-primary"><%= p.title %></b>
+              </a>
+          </div>
+      </div>
+      <% end %>
+      
+      <!--<article>-->
+      <!--  <img src="assets/눈송이인형.jpg">-->
+      <!--  <p>제품명 : 눈송이 인형</p>-->
+      <!--  <p>가격 : 7,000</p>-->
+      <!--  <p>참여자수 : 104 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/숙명학생수첩.jpg" alt>-->
+      <!--  <p>제품명 : 학생수첩</p>-->
+      <!--  <p>가격 : 9,900</p>-->
+      <!--    <p>참여자수 : 87 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/숙명보틀2.jpg" alt>-->
+      <!-- <p>제품명 : 숙명보틀</p>-->
+      <!-- <p>가격 : 5,000</p>-->
+      <!-- <p>참여자수 : 51</p>-->
+      <!--</article>-->
+      
+  
+     
+  </div>
+  <footer class="footer">
+    <p>Copyright © Sookmyung Commerce, 2017</br>숙명커머스 고객센터 070-1111-2222</br>월-금 AM 09:00~22:00 (주말, 공휴일은 쉽니다^^)</p>
+  </footer>
+  
+  </body>

@@ -1,0 +1,61 @@
+<%= render "layouts/navbar" %>
+
+<div class="container">
+    <div class="thumbnail">
+        <div style="margin-left:15px;margin-right:15px;" class="caption-full">
+            <h4><span class="pull-right label label-default"><%= @post.created_at.in_time_zone("Seoul").strftime("%Y-%m-%d %H:%M") %></span></h4>
+            <h3><% unless @post.image_url.nil? %><i class="fa fa-file-image-o" aria-hidden="true"></i><% else %><i class="fa fa-file-text" aria-hidden="true"></i><% end %> <%= @post.title %></h3>
+            <hr>
+            <% if @post.image_url? %>
+                <img class="img-responsive" src="<%= @post.image_url %>" width="400px" height="400p">
+            <% end %><br>
+            <p style="white-space: pre-wrap;"><%= sanitize @post.content, tags: %w(strong em a img image embed iframe span), attributes: %w(href src width height style) %></p>
+            <br>
+                        
+            <form action="/home/recommend" method="post">
+              <input type="hidden" name="id" value="<%= @post.id %>">
+              <button type="submit" class="btn btn-primary center-block"><span id="upcount_<%= @post.id %>"><%= @post.upcount %></span><br/>&nbsp;&nbsp;<span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;&nbsp;</button>
+            </form>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            
+            <html>
+            
+            <head>
+              <title>Demo Donation Progress Indicator Featured</title>
+            </head>
+            
+            <body>
+              <main role="main">
+                <!-- progress bar -->
+                <div class="donation--container">
+                  <h1 id="donation--user" class="donation--user">User</h1>
+                  <span class="donation--title">Reached:</span>
+                  <span id="donation--goal" class="donation--goal"></span>
+                  <div class="donation--bar">
+                    <div class="donation--rounded">
+                      <div id="donation--progress" class="donation--progress" style="width: 0;"></div>
+                    </div>
+                    <div id="donation--number" class="donation--number" style="left: 0;"></div>
+                    <span id="donation--status" class="donation--status"></span>
+                  </div>
+                  <form class="form--container">
+                    <input id="donation--amount" class="input" type="number" min="1" placeholder="희망 구매수량">
+                    <input id="donate" class="button" type="submit" value="확인">
+                  </form>
+                </div>
+              </main>
+            </body>
+            
+            </html>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="footer">
+  <p>Copyright © Sookmyung Commerce, 2017</br>숙명커머스 고객센터 070-1111-2222</br>월-금 AM 09:00~22:00 (주말, 공휴일은 쉽니다^^)</p>
+</footer>

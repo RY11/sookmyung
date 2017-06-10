@@ -1,0 +1,28 @@
+<%= render "layouts/navbar" %>
+  
+<div class="container">
+  <form name="write" action="/home/post_write" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+          <input type="text" name="title" id="title" class="form-control" placeholder="제목">
+      </div>
+      <textarea class="form-control" rows="10" id="content" name="content"></textarea><br/>
+      
+      <div class="well well-sm">
+          <label class="btn btn-default btn-file">
+              <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Image
+              <input type="file" name="pic" style="display:none;" accept="image/*" onchange='$("#upload-file-info").html($(this).val());'>
+          </label>
+          <span id="upload-file-info"></span>
+      </div><br/>
+      
+      <div class="text-right">
+          <a class="btn btn-default" href="javascript:history.back()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 취소</a>
+          <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 작성</button>
+      </div>
+  </form>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer class="footer">
+  <p>Copyright © Sookmyung Commerce, 2017</br>숙명커머스 고객센터 070-1111-2222</br>월-금 AM 09:00~22:00 (주말, 공휴일은 쉽니다^^)</p>
+</footer>

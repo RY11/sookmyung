@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>숙명커머스</title>
+
+  <div class="container">
+    <header class="header">
+      <h1 class="brand">숙명커머스</a></h1>
+      <nav>
+        <h2 class="readable-hidden">Menu</h2>
+        <ul class="gnb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">제품</a></li>
+          <li><a href="/upload">등록</a></li>
+          <% if session["user_id"].nil? %>
+          <li><a href="/login">로그인</a></li>
+          <% else %>
+          <li><a href="/home/logout">로그아웃</a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</head>
+
+
+
+</html>

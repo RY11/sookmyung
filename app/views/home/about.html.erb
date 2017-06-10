@@ -1,0 +1,86 @@
+<%= render "layouts/navbar" %>
+  
+  <div class="container">
+    <section class="blog">
+      <h2 class="readable-hidden">Blog</h2>
+      
+      <% Post.all.reverse.each do |p| %>
+     
+          <div class="text-center" style="height:280px; white-space: nowrap; overflow:hidden;">
+              <a href="view/?id=<%= p.id %>">
+                  <img class="img-responsive" src="<%= p.image_url %>" alt="" height="250px" width="250px">
+              </a>
+              <a href="view/?id=<%= p.id %>" style="text-decoration:none;">
+                 <b class="text-primary"><%= p.title %></b>
+              </a>
+          </div>
+      
+      <% end %>
+      
+      <!--<article>-->
+      <!--  <img src="assets/학잠샷.jpg">-->
+      <!--  <p>학잠 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/숙명보틀2.jpg">-->
+      <!--  <p>눈송이 보틀 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/눈송이인형.jpg">-->
+      <!--  <p>눈송이 인형 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/숙명포스트잇.jpg">-->
+      <!--  <p>눈송이 포스트잇</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/숙명악세.jpg">-->
+      <!--  <p>숙명악세서리</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/눈송이열쇠고리.jpg" >-->
+      <!--  <p>열쇠고리</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/동아리굿즈.jpg" >-->
+      <!--  <p>동아리 굿즈</p>-->
+      <!--</article>-->
+      
+      <!--<article>-->
+      <!--  <img src="assets/이어캡.jpg" >-->
+      <!--  <p>이어캡</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/필통.jpg" >-->
+      <!--  <p>필통</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/키링.jpg" >-->
+      <!--  <p>키링</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/뱃지.jpg" >-->
+      <!--  <p>뱃지</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/눈송이스티커.jpg" >-->
+      <!--  <p>눈송이 스티커</p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--  <img src="assets/돕바.jpg" height="400" width="300"/>-->
+      <!--  <p>돕바</p>-->
+      <!--</article>-->
+      
+      <!--<article>-->
+      <!--  <img src="assets/숙명후드.jpg" height="50" width="50">-->
+      <!--  <p>후드티 </p>-->
+      <!--</article>-->
+      <!--<article>-->
+      <!--   <img src="assets/숙명학생수첩.jpg">-->
+      <!--  <p>학생수첩 </p>-->
+      <!--</article>-->
+    </section>
+  </div>
+    <footer class="footer">
+    <p>Copyright © Sookmyung Commerce, 2017</br>숙명커머스 고객센터 070-1111-2222</br>월-금 AM 09:00~22:00 (주말, 공휴일은 쉽니다^^)</p>
+  </footer>
